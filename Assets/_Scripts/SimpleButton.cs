@@ -5,10 +5,15 @@ using UnityEngine;
 
 public class SimpleButton : VRButton
 {
+
+    [SerializeField]
+    GameObject src;
+
     protected override void OnClick(AudioSource aud)
     {
         base.OnClick(aud);
-        Debug.Log("Hello World");
+
+        Instantiate(src);
     }
 }
 
